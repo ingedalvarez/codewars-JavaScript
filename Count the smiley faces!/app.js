@@ -20,6 +20,16 @@ function countSmileys(arr) {
 let validSmiles = countSmileys([':)', ';(', ';}', ':-D']);
 console.log(validSmiles);
 
+/*
+Other solution on codewar
+
+function countSmileys(arr) {
+  return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+}
+
+*/
+
+
 /* Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
 
 Rules for a smiling face:
@@ -44,3 +54,5 @@ In case of an empty array return 0. You will not be tested with invalid input
 (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same.
 
  */
+
+
