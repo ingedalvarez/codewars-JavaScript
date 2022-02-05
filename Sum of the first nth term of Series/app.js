@@ -1,15 +1,21 @@
-function sumNth(n){{
+function sumNth(n) {
+  let arr = [];
+  let num = 1;
+  for (let i = 0; i < n; i++) {
+    arr.push(num);
+    num += 3;
+  }
 
+  return arr
+    .map((a) => 1 / a)
+    .reduce((acc, curr) => (acc += curr), 0)
+    .toFixed(2);
 }
 
 console.log(sumNth(5));
 
-
-
-/* Task:
-
-Your task is to write a function which returns the sum of following series 
-upto nth term(parameter).
+/* 
+Your task is to write a function which returns the sum of following series upto nth term(parameter).
 
 Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
 
@@ -26,4 +32,3 @@ Examples:(Input --> Output)
 1 --> 1 --> "1.00"
 2 --> 1 + 1/4 --> "1.25"
 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57" */
-
